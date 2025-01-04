@@ -1,0 +1,126 @@
+npc:
+  name: "Minelia Shop"
+  texture: "eyJ0aW1lc3RhbXAiOjE1NzYwNjYwNjYwNzYsInByb2ZpbGVJZCI6IjVhMDUxN2M2NjQzZDVkYjFhNTZmNDNkMjhiNjNlMzA0IiwicHJvZmlsZU5hbWUiOiJUaGFua3VtYXJkZXN0IiwidGV4dCI6Ilt7U0tJTl19In0="
+  signature: "e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBjZmJkZjYzYmIxYmY4Yzk4OTE0MGE1ZmM1"
+  location:
+    world: world
+    x: 10
+    y: 64
+    z: 100
+    yaw: 0
+    pitch: 0
+
+warp:
+  world: world
+  x: 10
+  y: 64
+  z: 105
+  yaw: 0
+  pitch: 0
+
+# Give un item minelia à un joueur
+minelia_item_command: "mitems give %player% %item%"
+# Give un spawner à un joueur
+spawner_command: "zspawner give %player% %type%"
+
+menu:
+  exchange:
+    name: "&aEchange"
+    lore:
+        - "&7Echangez vos émeraudes"
+        - "&7contre des pièces minelia"
+  shop:
+    name: "&aBoutique"
+    lore:
+        - "&7Achetez des items"
+        - "&7contre des pièces minelia"
+
+# Liste des items vendus par le NPC
+items:
+  pigmen_spawner:
+    price: 500
+    name: "&d&l&f✢ &a&lSpawner à Pig-Zombie &f✢"
+    lore:
+    - ""
+    - "&fObtenez un &7spawner &fet"
+    - "&7placez &fle dans votre &7base &f!"
+    - ""
+    - "&d┃ &fPrix: &d300 &5pièces Minélia"
+    - "&d┃ &fUtilisation: &b&l/spawners"
+    - ""
+    - "&d┃ &fDurée : &dVersion"
+    - ""
+    - "&a✔ &a&o(Clic pour acheter)"
+  blaze_spawner:
+    price: 500
+    name: "&f✢ &d&lSpawner à Blaze &f✢"
+    lore:
+    - ""
+    - "&fObtenez un &7spawner &fet"
+    - "&7placez &fle dans votre &7base &f!"
+    - ""
+    - "&d┃ &fPrix: &d250 &5pièces Minélia"
+    - "&d┃ &fUtilisation: &b&l/spawners"
+    - ""
+    - "&d┃ &fDurée : &dVersion"
+    - ""
+    - "&a✔ &a&o(Clic pour acheter)"
+  creeper_spawner:
+    price: 800
+    name: "&f✢ &2&lSpawner à Creeper &f✢"
+    lore:
+    - ""
+    - "&fObtenez un &7spawner &fet"
+    - "&7placez &fle dans votre &7base &f!"
+    - ""
+    - "&d┃ &fPrix: &d200 &5pièces Minélia"
+    - "&d┃ &fUtilisation: &b&l/spawners"
+    - ""
+    - "&d┃ &fDurée : &dVersion"
+    - ""
+    - "&a✔ &a&o(Clic pour acheter)"
+  corrosion-sceptre:
+    price: 500
+    name: "&f❄ &2&lSceptre &7◆ &a&lCorrosion &f❄"
+    lore:
+    - ""
+    - "&n§2§m----&f♦&2&m------&a&m-----&f‹&a※&f›&a&m-----§2§m----&f♦&2&m------"
+    - "&2┃ &fRareté: &a✯ ✯ ✯ &f✯ ✯ (&2&lRARE&f)"
+    - ""
+    - "&fInfligez &a25 dégats &fà un &2adversaire"
+    - "&fet il perdra &aun demi &c❤&f."
+    - ""
+    - "&7◆ &fClasse: &aNeutre"
+    - ""
+    - "&n§2§m----&f♦&2&m------&a&m-----&f‹&a※&f›&a&m-----§2§m----&f♦&2&m------"
+    - "&d┃ &fPrix: &d500 &5pièces Minélia"
+  monster-dagger:
+    price: 400
+    name: "§4❃ &4&lPoignard &7◆ &c&lMonstres §4❃"
+    lore:
+    - ""
+    - "§4§m-------&f♢&4&m-------&c&m------&f&m|&c&m------&4&m-------&f♢&4&m-------"
+    - "&4┃ &fRareté: &c✯ ✯ ✯ ✯ ✯ &f(&4&lLEGENDAIRE&f)"
+    - ""
+    - "&fCette &cépée &fvous permet de &4tuer"
+    - "&fles &ccréatures &fplus &4facilement &f!"
+    - ""
+    - "&7◆ &fClasse: &aNeutre"
+    - ""
+    - "§4§m-------&f♢&4&m-------&c&m------&f&m|&c&m------&4&m-------&f♢&4&m-------"
+    - "&d┃ &fPrix: &d400 &5pièces Minélia"
+  mine-pickaxe:
+    price: 1500
+    name: "§f⚒ &3&lPioche &7◆ &b&lMineur §f⚒"
+    lore:
+    - ""
+    - "&3&m---&b&m|&f&m----------&b&m--------&f&m♢&b&m--------&f&m----------&b&m|&3&m--- "
+    - "&3┃ &fRareté: &b✯ ✯ ✯ ✯ ✯ &f(&3&lLEGENDAIRE&f)"
+    - ""
+    - "&fCette &bpioche &fvous permet de &3miner"
+    - "&fvotre &bbase &fet &3commencez &fvotre &vaventure &f!"
+    - ""
+    - "&7◆ &fClasse: &aNeutre"
+    - ""
+    - "&3&m---&b&m|&f&m----------&b&m--------&f&m♢&b&m--------&f&m----------&b&m|&3&m--- "
+    - "&d┃ &fPrix: &d400 &5pièces Minélia"
