@@ -15,7 +15,7 @@ This plugin adds a shop system to exchange items for in-game currency and buy sp
 - Customizable NPC name, skin and location.
 
 ## Usage
-- **Permissions** : `plugin.permission` - Description.
+- **Permissions** : `plugin.permission`.
 - **Configuration** : Edit the `config.yml` file located in the `plugins/MineliaShop` folder.
 
 ## Compatibility
