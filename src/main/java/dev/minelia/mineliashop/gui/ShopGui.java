@@ -60,7 +60,7 @@ public class ShopGui extends BetterMenu {
           .asButton().setButtonAction(new ButtonAction() {
             @Override
             public void onClick(Player player) {
-              if (hasEnoughMoney(player, config.getInt("items." + key + ".price"))) {
+              if (!hasEnoughMoney(player, config.getInt("items." + key + ".price"))) {
                 player.sendMessage("§cVous n'avez pas assez d'argent pour acheter cet item.");
                 return;
               }
@@ -80,7 +80,7 @@ public class ShopGui extends BetterMenu {
   private boolean hasEnoughMoney(Player player, int price) {
     int count = 0;
     for (ItemStack item : player.getInventory().getContents()) {
-      if (item != null && item.getType() == Material.GOLD_NUGGET) {
+      if(item == null) {
         continue;
       }
       final net.minecraft.server.v1_8_R3.ItemStack nmsItem = CraftItemStack.asNMSCopy(item);
@@ -94,10 +94,13 @@ public class ShopGui extends BetterMenu {
     return count >= price;
   }
 
-  private void removeMoney(Player player, int price) {
-    int count = 0;
+  private void removeMoney(Player player, int amount) {
+    int count = amount;
     for (ItemStack item : player.getInventory().getContents()) {
-      if (item != null && item.getType() == Material.GOLD_NUGGET) {
+      if(count == 0) {
+        return;
+      }
+      if(item == null) {
         continue;
       }
       final net.minecraft.server.v1_8_R3.ItemStack nmsItem = CraftItemStack.asNMSCopy(item);
@@ -105,12 +108,12 @@ public class ShopGui extends BetterMenu {
         continue;
       }
 
-      if (item.getAmount() > price - count) {
-        item.setAmount(item.getAmount() - (price - count));
+      if (item.getAmount() > count) {
+        item.setAmount(item.getAmount() - count);
         return;
       } else {
+        count -= item.getAmount();
         player.getInventory().remove(item);
-        count += item.getAmount();
       }
     }
   }
