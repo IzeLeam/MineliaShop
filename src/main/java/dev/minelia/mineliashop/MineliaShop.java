@@ -32,9 +32,4 @@ public final class MineliaShop extends JavaPlugin {
     NPCManager npcManager = new NPCManager(this);
     NPC.getNPC().spawn();
   }
-
-  @Override
-  public void onDisable() {
-    saveConfig();
-  }
 }

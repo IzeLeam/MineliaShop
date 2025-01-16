@@ -1,5 +1,5 @@
 npc:
-  name: "Minelia Shop"
+  name: "&aMinelia Shop"
   texture: "eyJ0aW1lc3RhbXAiOjE1NzYwNjYwNjYwNzYsInByb2ZpbGVJZCI6IjVhMDUxN2M2NjQzZDVkYjFhNTZmNDNkMjhiNjNlMzA0IiwicHJvZmlsZU5hbWUiOiJUaGFua3VtYXJkZXN0IiwidGV4dCI6Ilt7U0tJTl19In0="
   signature: "e3RleHR1cmVzOntTS0lOOnt1cmw6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBjZmJkZjYzYmIxYmY4Yzk4OTE0MGE1ZmM1"
   location:
