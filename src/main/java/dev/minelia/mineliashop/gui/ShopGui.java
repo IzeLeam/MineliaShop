@@ -84,7 +84,11 @@ public class ShopGui extends BetterMenu {
         continue;
       }
       final net.minecraft.server.v1_8_R3.ItemStack nmsItem = CraftItemStack.asNMSCopy(item);
-      if (!nmsItem.hasTag() | !nmsItem.getTag().hasKey("minelia-money") || !nmsItem.getTag().getBoolean("minelia-money")) {
+      if (nmsItem == null) {
+        System.out.println("NULLLLLLL");
+        continue;
+      }
+      if (!nmsItem.hasTag() || !nmsItem.getTag().hasKey("minelia-money") || !nmsItem.getTag().getBoolean("minelia-money")) {
         continue;
       }
 
@@ -104,7 +108,11 @@ public class ShopGui extends BetterMenu {
         continue;
       }
       final net.minecraft.server.v1_8_R3.ItemStack nmsItem = CraftItemStack.asNMSCopy(item);
-      if (!nmsItem.hasTag() | !nmsItem.getTag().hasKey("minelia-money") || !nmsItem.getTag().getBoolean("minelia-money")) {
+      if (nmsItem == null) {
+        System.out.println("NULLLLLLL");
+        continue;
+      }
+      if (!nmsItem.hasTag() || !nmsItem.getTag().hasKey("minelia-money") || !nmsItem.getTag().getBoolean("minelia-money")) {
         continue;
       }
 

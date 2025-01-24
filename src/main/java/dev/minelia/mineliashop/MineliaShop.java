@@ -19,9 +19,6 @@ public final class MineliaShop extends JavaPlugin {
   public void onEnable() {
     instance = this;
 
-    if (!getDataFolder().exists()) {
-      getDataFolder().mkdir();
-    }
     saveDefaultConfig();
 
     // Register the player connection listener
