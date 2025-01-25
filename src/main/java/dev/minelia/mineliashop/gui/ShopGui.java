@@ -66,11 +66,9 @@ public class ShopGui extends BetterMenu {
               }
               removeMoney(player, config.getInt("items." + key + ".price"));
               if (key.contains("spawner")) {
-                System.out.println(config.getString("spawner_command").replace("%player%", player.getName()).replace("%type%", key).substring(0, key.indexOf("_")));
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
-                    config.getString("spawner_command").replace("%player%", player.getName()).replace("%type%", key).substring(0, key.indexOf("_")));
+                    config.getString("spawner_command").replace("%player%", player.getName()).replace("%type%", key));
               } else {
-                System.out.println(config.getString("minelia_item_command").replace("%player%", player.getName()).replace("%item%", key));
                 Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(),
                     config.getString("minelia_item_command").replace("%player%", player.getName()).replace("%item%", key));
               }
@@ -118,6 +116,7 @@ public class ShopGui extends BetterMenu {
         player.getInventory().removeItem(item);
       }
     }
+    throw new IllegalStateException("Player does not have enough money");
   }
 
   private Material getMaterial(String material) {
