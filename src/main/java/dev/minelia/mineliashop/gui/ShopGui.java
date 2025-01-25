@@ -113,7 +113,7 @@ public class ShopGui extends BetterMenu {
         return;
       } else {
         count -= item.getAmount();
-        player.getInventory().remove(item);
+        player.getInventory().removeItem(item);
       }
     }
   }
