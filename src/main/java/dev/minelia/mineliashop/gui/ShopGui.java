@@ -67,7 +67,7 @@ public class ShopGui extends BetterMenu {
               removeMoney(player, config.getInt("items." + key + ".price"));
               if (key.contains("spawner")) {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
-                    config.getString("spawner_command").replace("%player%", player.getName()).replace("%type%", key));
+                    config.getString("spawner_command").replace("%player%", player.getName()).replace("%type%", key.replace("_spawner", "")));
               } else {
                 Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(),
                     config.getString("minelia_item_command").replace("%player%", player.getName()).replace("%item%", key));
@@ -125,9 +125,9 @@ public class ShopGui extends BetterMenu {
     } else if (material.contains("pickaxe")) {
       return Material.DIAMOND_PICKAXE;
     } else if (material.contains("sceptre")) {
-      return Material.BLAZE_ROD;
+      return Material.DIAMOND_SWORD;
     } else if (material.contains("dagger")) {
-      return Material.IRON_SWORD;
+      return Material.STONE_AXE;
     } else {
       return Material.STICK;
     }
