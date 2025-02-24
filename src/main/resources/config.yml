@@ -1,0 +1,128 @@
+npc:
+  name: "&2&lMarchand"
+  texture: "ewogICJ0aW1lc3RhbXAiIDogMTczNzcyMzYwNzg0NywKICAicHJvZmlsZUlkIiA6ICIxNzRjZmRiNGEzY2I0M2I1YmZjZGU0MjRjM2JiMmM2ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJtYXJhZWwxOCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iNzk0OWJiZDRjYmUwZTdmOWJlN2IxZjlmNTM1MWVjOWQ5NGU4ZGRjMWZjNDE1NjA5M2RjYzQyM2U5NzdjZmNhIgogICAgfQogIH0KfQ=="
+  signature: "gHswpTOH5ZFpeAnqSKCxttQgnOMj3PA7YFApl4AHBDfsiXZU2XWA393z8L2NFlW/ZDgkZVquO/VV+JHzXDxCeZCdGU08tmWqyZD0bN0le7/A06HGo555NPCPmYTg9C+flvvgIVshwKWHJ6sPk6axgzhrYua5t8GERd3E9ox6GGb3gfNsCXKLxkq5FPiMbayRS8FZOfVDeXKI/xaxLksRxN+WWy2BdQt0myLsp7s1aeQR6nUtyw0FCE8wwBRVgVMiphdsdbOdF9ck69MJ1hLJFQfaUh7DKyYilgiMae/Gk37Hl0Z+qpb7pDewt78DkpN6h7PLiyfa5+FvyWqciWb+sL1LyAkHfXWr8HBHkRBlSmRMszIla2DPnIDrpdpx/Y2KC/JlsV1S6m1gC+tfSckmCFhHYaiV6XMChrj5x2QQsbZOo0PrvHSMXKZ1EZ/7Ej5oHLFtm9U1KPfkbybaF61HsqjrRAGcvE57DkFUyHj8/c2P8OqOMffHloe6ZxJ+gl3AOmWKKPBipSOIGCm6x2ZVPvuX6A6yNV0QsD/eZN+j1NlQtudxUZuACg5fQlhDL9WpGUvXea+PY28YaxZQX8OgKsv0ZN24QPlOlN0GxslWUl7P+WxYuDBHi4/veQjFRYeMDqjOoyDcufrTNbXbaJ5AE6La1vF6Nt2baneVjaoJya8="
+  location:
+    world: world
+    x: 57
+    y: 71
+    z: -38
+    yaw: 0
+    pitch: 0
+
+warp:
+  world: world
+  x: 10
+  y: 64
+  z: 105
+  yaw: 0
+  pitch: 0
+
+# Give un item minelia à un joueur
+minelia_item_command: "mitems give %player% %item%"
+# Give un spawner à un joueur
+spawner_command: "zspawner give %player% %type%"
+# Give des pièces minelia
+minelia_piece_give_command: "mitems give %player% minelia-money %amount%"
+
+menu:
+  exchange:
+    name: "&aEchange"
+    lore:
+        - "&7Echangez vos émeraudes"
+        - "&7contre des pièces minelia"
+  shop:
+    name: "&aBoutique"
+    lore:
+        - "&7Achetez des items"
+        - "&7contre des pièces minelia"
+
+# Liste des items vendus par le NPC
+items:
+  pigmen_spawner:
+    price: 500
+    name: "&d&l&f✢ &a&lSpawner à Pig-Zombie &f✢"
+    lore:
+    - ""
+    - "&fObtenez un &7spawner &fet"
+    - "&7placez &fle dans votre &7base &f!"
+    - ""
+    - "&d┃ &fPrix: &d300 &5pièces Minélia"
+    - "&d┃ &fUtilisation: &b&l/spawners"
+    - ""
+    - "&d┃ &fDurée : &dVersion"
+    - ""
+    - "&a✔ &a&o(Clic pour acheter)"
+  blaze_spawner:
+    price: 500
+    name: "&f✢ &d&lSpawner à Blaze &f✢"
+    lore:
+    - ""
+    - "&fObtenez un &7spawner &fet"
+    - "&7placez &fle dans votre &7base &f!"
+    - ""
+    - "&d┃ &fPrix: &d250 &5pièces Minélia"
+    - "&d┃ &fUtilisation: &b&l/spawners"
+    - ""
+    - "&d┃ &fDurée : &dVersion"
+    - ""
+    - "&a✔ &a&o(Clic pour acheter)"
+  creeper_spawner:
+    price: 800
+    name: "&f✢ &2&lSpawner à Creeper &f✢"
+    lore:
+    - ""
+    - "&fObtenez un &7spawner &fet"
+    - "&7placez &fle dans votre &7base &f!"
+    - ""
+    - "&d┃ &fPrix: &d200 &5pièces Minélia"
+    - "&d┃ &fUtilisation: &b&l/spawners"
+    - ""
+    - "&d┃ &fDurée : &dVersion"
+    - ""
+    - "&a✔ &a&o(Clic pour acheter)"
+  corrosion-sceptre:
+    price: 500
+    name: "&f❄ &2&lSceptre &7◆ &a&lCorrosion &f❄"
+    lore:
+    - ""
+    - "&n§2§m----&f♦&2&m------&a&m-----&f‹&a※&f›&a&m-----§2§m----&f♦&2&m------"
+    - "&2┃ &fRareté: &a✯ ✯ ✯ &f✯ ✯ (&2&lRARE&f)"
+    - ""
+    - "&fInfligez &a25 dégats &fà un &2adversaire"
+    - "&fet il perdra &aun demi &c❤&f."
+    - ""
+    - "&7◆ &fClasse: &aNeutre"
+    - ""
+    - "&n§2§m----&f♦&2&m------&a&m-----&f‹&a※&f›&a&m-----§2§m----&f♦&2&m------"
+    - "&d┃ &fPrix: &d500 &5pièces Minélia"
+  monster-dagger:
+    price: 400
+    name: "§4❃ &4&lPoignard &7◆ &c&lMonstres §4❃"
+    lore:
+    - ""
+    - "§4§m-------&f♢&4&m-------&c&m------&f&m|&c&m------&4&m-------&f♢&4&m-------"
+    - "&4┃ &fRareté: &c✯ ✯ ✯ ✯ ✯ &f(&4&lLEGENDAIRE&f)"
+    - ""
+    - "&fCette &cépée &fvous permet de &4tuer"
+    - "&fles &ccréatures &fplus &4facilement &f!"
+    - ""
+    - "&7◆ &fClasse: &aNeutre"
+    - ""
+    - "§4§m-------&f♢&4&m-------&c&m------&f&m|&c&m------&4&m-------&f♢&4&m-------"
+    - "&d┃ &fPrix: &d400 &5pièces Minélia"
+  mine-pickaxe:
+    price: 1500
+    name: "§f⚒ &3&lPioche &7◆ &b&lMineur §f⚒"
+    lore:
+    - ""
+    - "&3&m---&b&m|&f&m----------&b&m--------&f&m♢&b&m--------&f&m----------&b&m|&3&m--- "
+    - "&3┃ &fRareté: &b✯ ✯ ✯ ✯ ✯ &f(&3&lLEGENDAIRE&f)"
+    - ""
+    - "&fCette &bpioche &fvous permet de &3miner"
+    - "&fvotre &bbase &fet &3commencez &fvotre &vaventure &f!"
+    - ""
+    - "&7◆ &fClasse: &aNeutre"
+    - ""
+    - "&3&m---&b&m|&f&m----------&b&m--------&f&m♢&b&m--------&f&m----------&b&m|&3&m--- "
+    - "&d┃ &fPrix: &d400 &5pièces Minélia"

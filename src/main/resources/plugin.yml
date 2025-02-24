@@ -1,0 +1,3 @@
+name: MineliaShop
+version: '${project.version}'
+main: dev.minelia.mineliashop.MineliaShop
